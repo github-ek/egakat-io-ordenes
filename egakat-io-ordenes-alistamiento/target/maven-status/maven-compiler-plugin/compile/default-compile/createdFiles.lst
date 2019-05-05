@@ -1,0 +1,13 @@
+META-INF\spring-configuration-metadata.json
+com\egakat\ServletInitializer.class
+com\egakat\io\ordenes\service\api\alistamiento\OrdenesAlistamientoBdiIntegrationService.class
+com\egakat\io\ordenes\repository\OrdenAlistamientoDummy.class
+com\egakat\io\ordenes\configuration\JpaConfiguration.class
+com\egakat\io\ordenes\tasks\Task.class
+com\egakat\io\ordenes\dto\OrdenAlistamientoLoteDto.class
+com\egakat\io\ordenes\dto\OrdenAlistamientoLineaDto.class
+com\egakat\io\ordenes\dto\OrdenAlistamientoCancelacionDto.class
+com\egakat\io\ordenes\repository\OrdenAlistamientoLineaDummy.class
+com\egakat\io\ordenes\configuration\JpaAuditingConfiguration.class
+com\egakat\io\ordenes\configuration\RestConfiguration.class
+com\egakat\Application.class

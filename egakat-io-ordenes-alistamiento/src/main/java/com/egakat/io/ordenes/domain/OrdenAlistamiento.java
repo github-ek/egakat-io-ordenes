@@ -1,0 +1,76 @@
+package com.egakat.io.ordenes.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.DynamicUpdate;
+
+import com.egakat.integration.domain.IntegracionEntity;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Table(name = "ordenes_alistamiento_ord")
+@AttributeOverride(name = "id", column = @Column(name = "id_orden"))
+@DynamicUpdate
+@Getter
+@Setter
+@ToString(callSuper = true)
+@NoArgsConstructor
+public class OrdenAlistamiento extends IntegracionEntity {
+
+	@Column(name = "client_id", length = 32, nullable = false)
+	@NotNull
+	@Size(max = 32)
+	private String clientId;
+
+	@Column(name = "wh_id", length = 32, nullable = false)
+	@NotNull
+	@Size(max = 32)
+	private String whId;
+
+	@Column(name = "ordnum", length = 35, nullable = false)
+	@NotNull
+	@Size(max = 35)
+	private String ordnum;
+
+	@Column(name = "ordtyp", length = 4, nullable = false)
+	@NotNull
+	@Size(max = 4)
+	private String ordtyp;
+	
+	@Column(name = "id_cliente")
+	private Long idCliente;
+
+	@Column(name = "id_bodega")
+	private Long idBodega;
+
+	@Column(name = "id_orden_alistamiento")
+	private Long idOrden;
+
+	@OneToMany(mappedBy = "orden", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<OrdenAlistamientoLinea> lineas = new ArrayList<>();
+
+	public void addLinea(OrdenAlistamientoLinea item) {
+		lineas.add(item);
+		item.setOrden(this);
+	}
+
+	public void removeLinea(OrdenAlistamientoLinea item) {
+		item.setOrden(null);
+		lineas.remove(item);
+	}
+}
