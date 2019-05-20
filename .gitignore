@@ -28,5 +28,4 @@ hs_err_pid*
 **/.classpath
 **/.factorypath
 **/.project
-egakat-integration-files/.springBeans
-egakat-integration-maps/.springBeans
+egakat-io-ordenes-alistamiento/target/
