@@ -3,9 +3,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>egakat-io-ordenes-alistamiento</artifactId>
+	<artifactId>egakat-io-ordenes-transporte</artifactId>
 	<packaging>war</packaging>
-	<name>egakat-io-ordenes-alistamiento</name>
+	<name>egakat-io-ordenes-transporte</name>
 	<description></description>
 	<parent>
 		<groupId>com.egakat</groupId>
@@ -33,27 +33,30 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.egakat</groupId>
-			<artifactId>egakat-e-connect-maestros-client</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
 		</dependency>
 		<dependency>
-			<groupId>com.egakat</groupId>
-			<artifactId>egakat-wms-ordenes-client</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.egakat</groupId>
-			<artifactId>
-				egakat-integration-commons-suscripciones-dto
-			</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.egakat</groupId>
 			<artifactId>
 				egakat-integration-commons-actualizaciones
 			</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.egakat</groupId>
+			<artifactId>egakat-io-solicitudes-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.egakat</groupId>
+			<artifactId>egakat-e-connect-maestros-client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

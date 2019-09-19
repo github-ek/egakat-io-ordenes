@@ -30,7 +30,7 @@ public class OrdenesAlistamientoMapServiceImpl extends MapServiceImpl<OrdenAlist
 	private static final String TRANSLATE_ORDEN_ID_QUERY = "" 
 	+ "SELECT "
 	+ "    a.id_orden_alistamiento "
-	+ "FROM eConnect.dbo.ordenes_alistamiento a "
+	+ "FROM pConnect.dbo.ordenes_alistamiento a "
 	+ "WHERE "
 	+ "	   a.id_cliente = :id_cliente "
 	+ "AND a.numero_orden = :numero_orden "; 

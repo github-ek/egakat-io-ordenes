@@ -35,7 +35,7 @@ public class OrdenesAlistamientoConfirmacionCreacionPullServiceImpl extends Rest
 	+ "SET "
 	+ " 	a.estado_orden = 'CREACION_CONFIRMADA', "
 	+ "		a.fecha_confirmacion_creacion = :fecha "
-	+ "FROM eConnect.dbo.ordenes_alistamiento a " 
+	+ "FROM pConnect.dbo.ordenes_alistamiento a " 
 	+ "WHERE " 
 	+ "	   a.id_orden_alistamiento = :id "
 	+ "AND a.estado_orden = 'MENSAJE_ENVIADO' ";
